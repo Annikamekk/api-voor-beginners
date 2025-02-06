@@ -1,10 +1,15 @@
 
 
+getData(myURL).then( data194 => {
+    let myBirthday = data194.data.birthdate; 
+    const mySection = document.querySelector("section:nth-of-type(1)")
 
+    let myBirthdate = document.createElement("p");
+    
+    mySection.append(myBirthday);
 
-
-
-
+    console.log(myBirthday);
+})
 
 
 

@@ -4,19 +4,27 @@
 // iedereen: https://fdnd.directus.app/items/person/?fields=id,name,github_handle,avatar&filter={%22squads%22:{%22squad_id%22:{%22name%22:%22Minor%20Web%20Dev%22}}}&sort=name
 
 const baseURL = 'https://fdnd.directus.app/';
-const endpointMe = 'items/person/67';
+const endpointMe = 'items/person/194';
 
+const myURL = baseURL + endpointMe; 
+// mijn url van de link waar het opstaat endpoint is welke informatie je wil gebruiken
 
+console.log(myURL);
 
+getData(myURL).then( data194 => {
+	// haalt de data van mijn url 'data194' is een naam die ik geef aan mijn data?
+	// console.log(data194.data.name)
 
+	let deH1 = document.querySelector("h1");
+	// dit haalt de h1 uit de html
 
+	let myName = data194.data.name;
+	// variable gemaakt voor mijn data en haalt hij mijn naam op
 
-
-
-
-
-
-
+	deH1.textContent = myName; 
+	// de h1 veranderd nu naar de data die ik heb opgegeven naar mijn naam
+	// console.log(myName);
+});
 
 
 
